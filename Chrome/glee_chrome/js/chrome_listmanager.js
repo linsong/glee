@@ -72,7 +72,9 @@ Glee.ListManager = {
 	
 	initKeyBindings: function() {
 		$('#gleeListSearchField, .gleeListItem').bind('keydown', function(e){
-			if (e.keyCode == 27) // ESC
+			//if (e.keyCode == 27) // ESC
+      // Ctrl-h will hide gleeBox
+		  if (e.keyCode === 72 && (e.metaKey || e.ctrlKey))
 			{
 				Glee.ListManager.closeBox(true);
 			}

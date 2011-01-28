@@ -6,7 +6,9 @@ Glee.Events = {
 	onKeyDown: function(e) {
 
 		//	esc: hide gleeBox if empty. otherwise, empty gleeBox
-		if (e.keyCode === 27)
+		//if (e.keyCode === 27)
+    // Ctrl-h will hide gleeBox
+		if (e.keyCode === 72 && (e.metaKey || e.ctrlKey))
 		{
 			e.preventDefault();
 			if (!Glee.value())
